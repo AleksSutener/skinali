@@ -1,7 +1,19 @@
-* {
-    box-sizing: border-box;
-}
+// Настройки сетки
 
-body {
-    background: red;
-}
+@import 'grid';
+
+// Шрифты
+
+@import 'fonts';
+
+// Настройки цветов
+
+@import 'colors';
+
+// Настройки интерфейса
+
+@import 'interface';
+
+// Header
+
+@import 'sections/header';
