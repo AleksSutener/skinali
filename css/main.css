@@ -36,6 +36,14 @@
 }
 
 @font-face {
+  font-family: 'Proxima Nova Regular';
+  src: url("../fonts/ProximaNova-Regular.eot");
+  src: url("../fonts/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Proxima Nova Semibold';
   src: url("../fonts/ProximaNova-Semibold.eot");
   src: url("../fonts/ProximaNova-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Semibold.woff") format("woff"), url("../fonts/ProximaNova-Semibold.ttf") format("truetype");
@@ -62,6 +70,14 @@ body {
 .section__title {
   margin-top: 0;
   margin-bottom: 100px;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
 }
 
 .btn-o {
@@ -94,6 +110,41 @@ body {
 
 .btn:hover {
   background: #255fd9;
+}
+
+.btn-fitting, .btn-add {
+  padding: 10px;
+  text-transform: uppercase;
+  color: #507fe1;
+  background: #fff;
+  border: none;
+  font-size: 11px;
+  font-family: 'Proxima Nova Regular', sans-serif;
+}
+
+.btn-fitting:hover {
+  background: #507fe1;
+  color: #fff;
+}
+
+.btn-add {
+  background: #7c9fe8;
+  color: #fff;
+}
+
+.btn-add:hover {
+  background: #507fe1;
+}
+
+.btn-like {
+  background: #507fe1 url("../img/heart-outline.svg") no-repeat center;
+  background-size: 50%;
+  border: none;
+  width: 29px;
+}
+
+.btn-like:hover {
+  background-image: url("../img/heart.svg");
 }
 
 .bg-secondary {
@@ -196,6 +247,7 @@ body {
   background: #fff;
   -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
 .navbar-wrap {
@@ -374,39 +426,6 @@ body {
   }
 }
 
-.advantages-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-}
-
-.advantages-wrap__item {
-  width: calc(100% / 3);
-  text-align: center;
-  margin-bottom: 100px;
-}
-
-@media (max-width: 768px) {
-  .advantages-wrap__item {
-    width: 50%;
-  }
-}
-
-@media (max-width: 576px) {
-  .advantages-wrap__item {
-    width: 100%;
-    margin-bottom: 50px;
-  }
-}
-
 .offer {
   padding: 129px 0;
 }
@@ -533,6 +552,122 @@ body {
   .form__btn {
     padding-right: 0;
     padding-left: 0;
+  }
+}
+
+.advantages-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.advantages-wrap__item {
+  width: calc(100% / 3);
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 768px) {
+  .advantages-wrap__item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .advantages-wrap__item {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+.catalog-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.catalog-card {
+  position: relative;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+          box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+  width: 570px;
+  overflow: hidden;
+}
+
+.catalog-card__buttons {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.catalog-card__img {
+  display: block;
+}
+
+.catalog-card__tag {
+  position: absolute;
+  top: 10px;
+  left: 9px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+  color: #fff;
+  padding: 9px 10px;
+  background: rgba(80, 127, 225, 0.6);
+  text-transform: uppercase;
+}
+
+.catalog-card:hover .catalog-card__buttons {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+@media (max-width: 1199px) {
+  .catalog-card {
+    max-width: 470px;
+  }
+}
+
+@media (max-width: 991px) {
+  .catalog-wrap {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .catalog-card {
+    max-width: 570px;
+  }
+  .catalog-card__buttons {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@media (max-width: 576px) {
+  .catalog-card {
+    height: 130px;
+  }
+  .catalog-card__img {
+    max-width: 570px;
   }
 }
 /*# sourceMappingURL=main.css.map */
