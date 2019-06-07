@@ -3,6 +3,20 @@ body {
     color: $text-color;
 }
 
+.section {
+    padding: 100px 0;
+    &-title {
+        font-size: 30px;
+        @include bold;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__title {
+        margin-top: 0;
+        margin-bottom: 100px;
+    }
+}
+
 .btn-o {
     border: 2px solid $primary;
     padding: 17px 22px;
@@ -32,8 +46,86 @@ body {
     }
 }
 
+.bg-secondary {
+    background: $bg-secondary;
+}
+
+.input, .select {
+    height: 80px;
+    padding-left: 30px;
+}
+
+.select-wrap {
+    position: relative;
+    &::after {
+        content: '';
+        width: 27px;
+        height: 14px;
+        background: url('../img/down-arrow.svg') no-repeat center;
+        background-size: cover;
+        position: absolute;
+        top: 50%;
+        right: 19px;
+        margin-top: -7px;
+        z-index: 1;
+    }
+}
+
+.select {
+    appearance: none;
+    position: relative;
+    z-index: 2;
+    background: none;
+    cursor: pointer;
+}
+
+.checkbox {
+    display: none;
+    &-label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            border: 1px solid #ddd;
+            margin-right: 19px;
+        }
+    }
+    &:checked + label::before {
+        background: url('../img/check-mark.svg') no-repeat center;
+        background-size: 70%;
+    }
+}
+
 @media (max-width: 576px) {
     .btn-o {
         font-size: 10px;
+    }
+
+    .section {
+        padding: 60px 0;
+        &-title {
+            font-size: 23px;
+        }
+        &__title {
+            margin-bottom: 50px;
+        }
+    }
+
+    .checkbox {
+        &-label {
+            flex-direction: column-reverse;
+            &::before {
+                margin-right: 0;
+                margin-top: 15px;
+            } 
+        }
+    }
+
+    .input, .select {
+        height: 50px;
     }
 }

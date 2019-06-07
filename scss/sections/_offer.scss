@@ -1,0 +1,121 @@
+.offer {
+    padding: 129px 0;
+    &-wrap {
+        background: #fff url('../img/offer-form-bg.png') no-repeat center right;
+        background-size: contain;
+        padding: 80px;
+        margin-top: -200px;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    }
+    &__title {
+        font-size: 25px;
+        text-transform: uppercase;
+        @include bold;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+    &__subtitle {
+        font-size: 21px;
+        margin-bottom: 40px;
+        display: block;
+    }
+}
+
+.form {
+    &__row {
+        display: flex;
+        align-items: center;
+        max-width: 900px;
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__label {
+        font-size: 17px;
+        display: block;
+        margin-bottom: 15px;
+    }
+    &__group {
+        flex-basis: calc(100% / 3);
+    }
+    &__input, &__select {
+        width: 100%;
+        border: 1px solid #ddd;
+        border-right-width: 0px;
+        &:last-child {
+            border-right-width: 1px;
+        }
+    }
+    &__checkbox {
+        margin-right: 40px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__btn {
+        height: 80px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1199px) {
+    .offer {
+        &-wrap {
+            background-position: center right -120px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .offer {
+        &-wrap {
+            background-image: none;
+        }
+    }
+
+    .form {
+        &__row {
+            flex-direction: column;
+            &_checkbox {
+                flex-direction: row;
+            }
+        }
+        &__group {
+            width: 100%;
+        }
+        &__input {
+            margin-bottom: 20px;
+        }
+    }
+
+    .select-wrap {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .offer {
+        &-wrap {
+            padding: 30px;
+        }
+        &__title {
+            font-size: 18px;
+        }
+        &__subtitle {
+            font-size: 16px;
+        }
+    }
+
+    .form {
+        &__row {
+            &_checkbox {
+                justify-content: space-around;
+            }
+        }
+        &__btn {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}
