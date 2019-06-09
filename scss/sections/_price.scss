@@ -51,9 +51,12 @@
     }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
     .price-wrap {
-        justify-content: space-around;
+        justify-content: center;
+    }
+    .price-card {
+        margin: 0 20px;
     }
 }
 
@@ -61,6 +64,15 @@
     .price-wrap {
         &__card {
             margin-bottom: 20px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .price-wrap {
+        &__card {
+            margin-right: 0;
+            margin-left: 0;
         }
     }
 }

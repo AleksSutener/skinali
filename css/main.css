@@ -878,16 +878,88 @@ h1, h2, h3, h4, h5, h6 {
   bottom: -80px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .price-wrap {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .price-card {
+    margin: 0 20px;
   }
 }
 
 @media (max-width: 768px) {
   .price-wrap__card {
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .price-wrap__card {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.steps-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.step {
+  text-align: center;
+  position: relative;
+}
+
+.step__text {
+  max-width: 170px;
+  font-size: 14px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.step__title {
+  font-size: 18px;
+  font-family: 'Proxima Nova Regular', sans-serif;
+}
+
+.step::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: #bab9b8;
+  height: 2px;
+  width: 100%;
+  top: 29%;
+  right: -60%;
+}
+
+.step:last-child::before {
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  .steps-wrap__step {
+    margin-bottom: 30px;
+  }
+  .step {
+    width: 33%;
+  }
+  .step::before {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .step {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */
