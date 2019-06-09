@@ -1,6 +1,7 @@
 body {
     @include light;
     color: $text-color;
+    font-size: 16px;
 }
 
 .section {
@@ -25,6 +26,10 @@ img {
     max-width: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
 .btn-o {
     border: 2px solid $primary;
     padding: 17px 22px;
@@ -35,6 +40,7 @@ img {
     background: transparent;
     cursor: pointer;
     transition: 0.2s;
+    text-decoration: none;
     &:hover {
         background: $primary;
         color: #fff;
@@ -49,6 +55,8 @@ img {
     @include bold;
     color: #fff;
     cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
     &:hover {
         background: darken($primary, 10%);
     }
@@ -82,6 +90,9 @@ img {
         &:hover {
             background-image: url('../img/heart.svg');
         }
+    }
+    &_lg{
+        padding: 25px 30px;
     }
 }
 
@@ -151,6 +162,13 @@ img {
         }
         &__title {
             margin-bottom: 50px;
+        }
+    }
+
+    .btn {
+        &_lg {
+            font-size: 14px;
+            padding: 20px 15px;
         }
     }
 

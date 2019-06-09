@@ -37,6 +37,18 @@
             }
         }
     }
+    &-link {
+        text-align: center;
+        &__text {
+            display: block;
+        }
+        &__more {
+            margin-bottom: 20px;
+        }
+    }
+    &__link {
+        margin-top: 30px;
+    }
 }
 
 @media (max-width: 1199px) {
