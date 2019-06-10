@@ -1,0 +1,39 @@
+.reviews-slider {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: flex-end;
+    &__img {
+        border-radius: 50%;
+        display: block;
+        border: 2px solid #6a99e9;
+        margin: 30px auto 20px;
+    }
+    &__text {
+        padding: 20px;
+        background: #fff;
+        font-style: italic;
+        font-size: 15px;
+        border-radius: 10px;
+        position: relative;
+        max-width: 370px;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            margin-left: -15px;
+            border: 15px solid transparent;
+            border-top: 15px solid #fff;
+        }
+    }
+    &__name {
+        font-size: 14px;
+    }
+    &__title {
+        margin: 0;
+        font-size: 16px;
+        @include bold;
+    }
+}
