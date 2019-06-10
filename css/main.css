@@ -1055,4 +1055,63 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 16px;
   font-family: 'Proxima Nova Semibold', sans-serif;
 }
+
+.factory-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.factory-wrap__img {
+  margin-right: 70px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.factory-wrap__text {
+  font-size: 20px;
+  line-height: 1.55;
+  max-width: 520px;
+}
+
+.factory-wrap__text p {
+  margin-top: 0;
+}
+
+.factory-wrap__text p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .factory-wrap__img {
+    margin-right: 30px;
+  }
+  .factory-wrap__text {
+    line-height: 1.05;
+  }
+}
+
+@media (max-width: 768px) {
+  .factory-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .factory-wrap__img {
+    max-width: 370px;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .factory-wrap__text {
+    max-width: 370px;
+    line-height: 1.55;
+  }
+}
 /*# sourceMappingURL=main.css.map */
