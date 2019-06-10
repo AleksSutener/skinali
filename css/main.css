@@ -1181,4 +1181,44 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0;
   }
 }
+
+.questions-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.questions__title {
+  font-size: 30px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+  margin: 0;
+  margin-right: 50px;
+}
+
+.questions__link {
+  font-size: 24px;
+  color: #507fe1;
+}
+
+@media (max-width: 768px) {
+  .questions-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .questions__title {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
 /*# sourceMappingURL=main.css.map */
