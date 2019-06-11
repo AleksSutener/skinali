@@ -83,12 +83,12 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
     &-like {
-        background: $primary url('../img/heart-outline.svg') no-repeat center;
+        background: $primary url('../img/catalog/heart-outline.svg') no-repeat center;
         background-size: 50%;
         border: none;
         width: 29px;
         &:hover {
-            background-image: url('../img/heart.svg');
+            background-image: url('../img/catalog/heart.svg');
         }
     }
     &_lg{
@@ -111,7 +111,7 @@ h1, h2, h3, h4, h5, h6 {
         content: '';
         width: 27px;
         height: 14px;
-        background: url('../img/down-arrow.svg') no-repeat center;
+        background: url('../img/offer/down-arrow.svg') no-repeat center;
         background-size: cover;
         position: absolute;
         top: 50%;
@@ -145,7 +145,7 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
     &:checked + label::before {
-        background: url('../img/check-mark.svg') no-repeat center;
+        background: url('../img/offer/check-mark.svg') no-repeat center;
         background-size: 70%;
     }
 }

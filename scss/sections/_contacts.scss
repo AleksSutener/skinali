@@ -1,23 +1,30 @@
+.contacts {
+    padding-bottom: 0;
+    &__wrap {
+        margin-bottom: 40px;
+    }
+}
+
 .contacts-wrap {
     display: flex;
     justify-content: space-around;
     &__img {
         margin: 0 auto 20px;
         &_phone {
-            background: url('../img/phone-call.svg') no-repeat center;
+            background: url('../img/contacts/phone-call.svg') no-repeat center;
             width: 30px;
             height: 30px;
             background-size: cover;
         }
         &_address {
-            background: url('../img/placeholder.svg') no-repeat center;
+            background: url('../img/contacts/placeholder.svg') no-repeat center;
             width: 22px;
             height: 30px;
             background-size: cover;
         }
 
         &_mail {
-            background: url('../img/message.svg') no-repeat center;
+            background: url('../img/contacts/message.svg') no-repeat center;
             width: 33px;
             height: 31px;
             background-size: cover;
