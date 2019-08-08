@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/twentytwenty.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Фабрика скинали</title>
 </head>
@@ -13,13 +14,13 @@
         <div class="menu">
             <div class="container">
                 <nav class="menu__nav">
-                    <a href="#" class="menu__link">Главная </a>
-                    <a href="#" class="menu__link">Продукция</a>
-                    <a href="#" class="menu__link">Каталог</a>
-                    <a href="#" class="menu__link">Примеры работ</a>
-                    <a href="#" class="menu__link">Примерка изображений</a>
-                    <a href="#" class="menu__link">Стоимость дилерам</a>
-                    <a href="#" class="menu__link">О скинали</a>
+                    <a href="index.html" class="menu__link">Главная </a>
+                    <a href="#advantages" class="menu__link">Преимущества</a>
+                    <a href="#price" class="menu__link">Продукция</a>
+                    <a href="#catalog" class="menu__link">Каталог</a>
+                    <a href="#before" class="menu__link">Примеры работ</a>
+                    <a href="#offer_2" class="menu__link">Стоимость дилерам</a>
+                    <a href="#factory" class="menu__link">О скинали</a>
                 </nav>
             </div>
         </div>
@@ -43,7 +44,7 @@
                         <a href="tel:+79121234567" class="navbar__phone">+7 912 123-45-67</a>
                         <a href="mailto:info@mail.cu" class="navbar__email navbar__small-text">info@mail.cu</a>
                     </div>
-                    <button class="btn-o navbar__btn">Получить консультацию</button>
+                    <a href="#offer" class="btn-o navbar__btn">Получить консультацию</a>
                 </div>
             </div>
         </div>
@@ -51,12 +52,12 @@
             <div class="container">
                 <h1 class="hero__title">Гарантия минимальной цены на скинали</h1>
                 <span class="hero__subtitle">от 3 000 р/м<sup>2</sup></span>
-                <button class="btn hero__btn">Заказать скинали</button>
+                <a href="#offer" class="btn hero__btn">Заказать скинали</a>
             </div>
         </div>
     </header>
     <main>
-        <section class="offer bg-secondary section">
+        <section class="offer bg-secondary section" id="offer">
             <div class="container">
                 <div class="offer-wrap ofeer__wrap offer-wrap_calc">
                     <h2 class="offer__title">Оставьте заявку на расчет</h2>
@@ -113,7 +114,7 @@
                 </div>
             </div>
         </section>
-        <section class="advantages section">
+        <section class="advantages section" id="advantages">
             <div class="container">
                 <h2 class="section-title section__title">Наши преимущества</h2>
                 <div class="advantages-wrap">
@@ -156,7 +157,7 @@
                 </div>
             </div>
         </section>
-        <section class="section catalog bg-secondary">
+        <section class="section catalog bg-secondary" id="catalog">
             <div class="container">
                 <h2 class="section-title section__title">Каталог скинали</h2>
                 <div class="catalog-wrap">
@@ -239,7 +240,7 @@
                 </div>
             </div>
         </section>
-        <section class="section blog">
+        <section class="section blog" id="blog">
             <div class="container">
                 <div class="blog__heading">
                     <h3 class="blog__title">Полезное или что важно знать о скинали...</h3>
@@ -281,7 +282,7 @@
                 </div>
             </div>
         </section>
-        <section class="price section">
+        <section class="price section" id="price">
             <div class="container">
                 <h2 class="section-title section__title">Цены и виды скинали </h2>
                 <div class="price-wrap">
@@ -459,6 +460,41 @@
                 </div>
             </div>
         </section>
+        <section class="before section" id="before">
+            <div class="container">
+                <h2 class="section-title section__title">До и после</h2>
+                <div class="before-slider-wrap">
+                    <div class="before-slider">
+                        <div class="before-slider__item">
+                            <div class="before-after">
+                                <img src="img/before-slider/before-1.jpg" alt="До">
+                                <img src="img/before-slider/after-1.jpg" alt="После">
+                            </div>
+                        </div>
+                        <div class="before-slider__item">
+                            <div class="before-after">
+                                <img src="img/before-slider/before-2.jpg" alt="До">
+                                <img src="img/before-slider/after-2.jpg" alt="После">
+                            </div>
+                        </div>
+                        <div class="before-slider__item">
+                            <div class="before-after">
+                                <img src="img/before-slider/before-1.jpg" alt="До">
+                                <img src="img/before-slider/after-1.jpg" alt="После">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="before-slider-arrows">
+                        <button class="arrow arrow-left">
+                            <img src="img/before-slider/left-arrow.svg" alt="Назад">
+                        </button>
+                        <button class="arrow arrow-right">
+                            <img src="img/before-slider/right-arrow.svg" alt="Вперёд">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="reviews section bg-secondary">
             <div class="container">
                 <h2 class="section-title section__title">Отзывы наших клиентов</h2>
@@ -501,7 +537,7 @@
                 </div>
             </div>
         </section>
-        <section class="offer section">
+        <section class="offer section" id="offer_2">
             <div class="container">
                 <div class="offer-wrap ofeer__wrap offer-wrap_discount">
                     <h2 class="offer__title">Ищите где дешевле и лучше?</h2>
@@ -533,7 +569,7 @@
                 </div>
             </div>
         </section>
-        <section class="factory section">
+        <section class="factory section" id="factory">
             <div class="container">
                 <h2 class="section-title section__title">О производстве</h2>
                 <div class="factory-wrap">
@@ -593,7 +629,7 @@
             <div class="container">
                 <div class="questions-wrap">
                     <h3 class="questions__title">Остались вопросы?</h3>
-                    <a href="#" class="questions__link">Задайте их менеджеру</a>
+                    <a href="tel:+79121234567" class="questions__link">Задайте их менеджеру</a>
                 </div>  
             </div>
         </section>
@@ -630,5 +666,11 @@
     </footer>
     <!-- Подключение виджена spikmi -->
     <script type="text/javascript" src="https://spikmi.com/Widget?Id=1123"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.twentytwenty.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.event.move.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
